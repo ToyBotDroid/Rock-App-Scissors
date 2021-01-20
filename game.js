@@ -20,7 +20,7 @@ choices.forEach(choice => {
 // Computer Random output
 
 const option = ["rock", "paper", "scissors"]
-const random = Math.round(Math.random()*(option.length - 1));
+const random = Math.floor(Math.random()*(option.length));
 
 function computerOutput(){
   return option[random]
@@ -31,8 +31,8 @@ function computerOutput(){
   computerMove = computerOutput()
   play()
   updateScore()
-  playerChosen.innerHTML = playerMove
-  computerChosen.innerHTML = computerMove
+  playerChosen.innerHTML = `<b>  You chose : ${playerMove} </b>` 
+  computerChosen.innerHTML = `<b> Computer chose : ${playerMove} </b>` 
   displayResult.innerHTML = result
 
   displayPlayerScore.innerHTML = `<b> Player Score = ${playerScore} </b>` 
@@ -96,8 +96,13 @@ let restart = document.querySelector('.restart')
 
 restart.addEventListener('click', () => {
   playerScore = 0
-  computerScore =0
+  computerScore = 0
 
-  displayPlayerScore.innerHTML = `<b> Player Score = ${playerScore} </b>` 
-  displayComputerScore.innerHTML = `<b> Computer Score = ${computerScore} </b>`
+  playerChosen.innerHTML = `` 
+  computerChosen.innerHTML = `` 
+  displayResult.style.display = "none"
+
+  displayPlayerScore.innerHTML = `<b> Player Score = 0 </b>` 
+  displayComputerScore.innerHTML = `<b> Computer Score = 0 </b>`
+
 })
