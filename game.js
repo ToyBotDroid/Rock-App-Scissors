@@ -32,7 +32,7 @@ function computerOutput(){
   play()
   updateScore()
   playerChosen.innerHTML = `<b>  You chose : ${playerMove} </b>` 
-  computerChosen.innerHTML = `<b> Computer chose : ${playerMove} </b>` 
+  computerChosen.innerHTML = `<b> Computer chose : ${ComputerMove} </b>` 
   displayResult.innerHTML = result
 
   displayPlayerScore.innerHTML = `<b> Player Score = ${playerScore} </b>` 
