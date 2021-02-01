@@ -35,7 +35,7 @@ function computerOutput(){
   computerChosen.innerHTML = `<b> Computer chose : ${computerMove} </b>` 
   displayResult.innerHTML = result
 
-  displayPlayerScore.innerHTML = `<b> Player Score = ${playerScore} </b>` 
+  displayPlayerScore.innerHTML = `<b> Your Score = ${playerScore} </b>` 
   displayComputerScore.innerHTML = `<b> Computer Score = ${computerScore} </b>`
 
   // console.log(computerChosen)
@@ -53,19 +53,19 @@ function play(){
   if (computerMove === playerMove){
     return result = "It's a tie";
   } else if ( computerMove === "rock" && playerMove === "paper"){
-    return result = "Player won !";
+    return result = "You won !";
     // return playerScore++;
   } else if ( computerMove === "rock" && playerMove === "scissors"){
     return result = "Computer won !";
     // computerScore++;
   } else if ( computerMove === "paper" && playerMove === "scissors"){
-    return result = "Player won !";
+    return result = "You won !";
     // return playerScore++;
   } else if ( computerMove === "paper" && playerMove === "rock"){
     return result = "Computer won !";
     // computerScore++;
   } else if ( computerMove === "scissors" && playerMove === "rock"){
-    return result = "Player won !";
+    return result = "You won !";
     // return playerScore++;
   } else if ( computerMove === "scissors" && playerMove === "paper"){
     return result = "Computer won !";
@@ -100,7 +100,7 @@ restart.addEventListener('click', () => {
 
   playerChosen.innerHTML = `` 
   computerChosen.innerHTML = `` 
-  displayResult.style.display = "none"
+  displayResult.innerHTML = ""
 
   displayPlayerScore.innerHTML = `<b> Player Score = 0 </b>` 
   displayComputerScore.innerHTML = `<b> Computer Score = 0 </b>`
